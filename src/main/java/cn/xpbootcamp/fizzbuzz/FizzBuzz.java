@@ -1,5 +1,8 @@
 package cn.xpbootcamp.fizzbuzz;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class FizzBuzz {
     private final int number;
 
@@ -8,25 +11,32 @@ public class FizzBuzz {
     }
 
     public String reply() {
-        if (isDivisibleBy(3) && isDivisibleBy(5)) {
+        if (isDivisibleByNumbers(Arrays.asList(3, 5, 7))) {
+            return "FizzBuzzWhizz";
+        }
+        if (isDivisibleByNumbers(Arrays.asList(3, 5))) {
             return "FizzBuzz";
         }
-        if (isDivisibleBy(3) && isDivisibleBy(7)) {
+        if (isDivisibleByNumbers(Arrays.asList(3, 7))) {
             return "FizzWhizz";
         }
-        if (isDivisibleBy(5) && isDivisibleBy(7)) {
+        if (isDivisibleByNumbers(Arrays.asList(5, 7))) {
             return "BuzzWhizz";
         }
-        if (isDivisibleBy(3)) {
+        if (isDivisibleByNumbers(Arrays.asList(3))) {
             return "Fizz";
         }
-        if (isDivisibleBy(5)) {
+        if (isDivisibleByNumbers(Arrays.asList(5))) {
             return "Buzz";
         }
-        if (isDivisibleBy(7)) {
+        if (isDivisibleByNumbers(Arrays.asList(7))) {
             return "Whizz";
         }
         return String.valueOf(number);
+    }
+
+    private boolean isDivisibleByNumbers(List<Integer> numbers) {
+        return numbers.stream().map(this::isDivisibleBy).reduce(true, (x, y) -> x && y);
     }
 
     private boolean isDivisibleBy(int divisor) {

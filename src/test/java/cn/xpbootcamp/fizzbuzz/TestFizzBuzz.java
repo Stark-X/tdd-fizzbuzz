@@ -36,4 +36,9 @@ public class TestFizzBuzz {
     public void should_return_buzzwhizz_when_number_is_divisible_by_5_and_7() {
         assertThat(new FizzBuzz(35).reply(), equalTo("BuzzWhizz"));
     }
+
+    @Test
+    public void should_return_buzzwhizz_when_number_is_divisible_by_3_and_5_and_7() {
+        assertThat(new FizzBuzz(105).reply(), equalTo("FizzBuzzWhizz"));
+    }
 }
