@@ -14,6 +14,9 @@ public class FizzBuzz {
         if (isDivisibleBy(3) && isDivisibleBy(7)) {
             return "FizzWhizz";
         }
+        if (isDivisibleBy(5) && isDivisibleBy(7)) {
+            return "BuzzWhizz";
+        }
         if (isDivisibleBy(3)) {
             return "Fizz";
         }
