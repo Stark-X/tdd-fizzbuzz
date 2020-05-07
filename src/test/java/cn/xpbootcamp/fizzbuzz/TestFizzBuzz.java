@@ -12,4 +12,8 @@ public class TestFizzBuzz {
         assertThat(new FizzBuzz(3).reply(), equalTo("Fizz"));
     }
 
+    @Test
+    public void should_return_buzz_when_number_is_divisible_by_5() {
+        assertThat(new FizzBuzz(5).reply(), equalTo("Buzz"));
+    }
 }
