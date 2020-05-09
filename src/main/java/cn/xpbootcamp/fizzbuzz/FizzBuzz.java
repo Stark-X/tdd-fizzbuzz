@@ -11,19 +11,11 @@ public class FizzBuzz {
     }
 
     public String reply() {
-        if (isContains(3)) {
+        if (isContains(3) || isContains(7) && isDivisibleByNumbers(Arrays.asList(3))) {
             return "Fizz";
         }
 
-        if (isContains(7) && isDivisibleByNumbers(Arrays.asList(3))) {
-            return "Fizz";
-        }
-
-        if (isContains(7) && isDivisibleByNumbers(Arrays.asList(7))) {
-            return "Whizz";
-        }
-
-        if (isDivisibleByNumbers(Arrays.asList(7)) && isContains(5)) {
+        if (isDivisibleByNumbers(Arrays.asList(7)) && (isContains(7) || isContains(5))) {
             return "Whizz";
         }
 
