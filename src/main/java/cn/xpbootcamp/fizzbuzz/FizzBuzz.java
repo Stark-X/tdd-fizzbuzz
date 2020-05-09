@@ -11,6 +11,10 @@ public class FizzBuzz {
     }
 
     public String reply() {
+        if (isContains(3)) {
+            return "Fizz";
+        }
+
         if (isDivisibleByNumbers(Arrays.asList(3, 5, 7))) {
             return "FizzBuzzWhizz";
         }
@@ -41,5 +45,9 @@ public class FizzBuzz {
 
     private boolean isDivisibleBy(int divisor) {
         return number % divisor == 0;
+    }
+
+    private boolean isContains(int literalNumber) {
+        return String.valueOf(number).contains(String.valueOf(literalNumber));
     }
 }

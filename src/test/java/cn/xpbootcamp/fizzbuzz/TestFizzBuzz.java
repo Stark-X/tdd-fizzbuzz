@@ -8,8 +8,15 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 public class TestFizzBuzz {
     @Test
-    public void should_return_fizz_when_number_is_divisible_by_3() {
+    public void should_return_fizz_when_number_is_contains_3() {
         assertThat(new FizzBuzz(3).reply(), equalTo("Fizz"));
+        assertThat(new FizzBuzz(13).reply(), equalTo("Fizz"));
+        assertThat(new FizzBuzz(23).reply(), equalTo("Fizz"));
+    }
+
+    @Test
+    public void should_return_fizz_when_number_is_divisible_by_3_and_not_contains_3() {
+        assertThat(new FizzBuzz(6).reply(), equalTo("Fizz"));
     }
 
     @Test
@@ -33,12 +40,12 @@ public class TestFizzBuzz {
     }
 
     @Test
-    public void should_return_buzzwhizz_when_number_is_divisible_by_5_and_7() {
-        assertThat(new FizzBuzz(35).reply(), equalTo("BuzzWhizz"));
+    public void should_return_buzzwhizz_when_number_is_divisible_by_5_and_7_and_not_contains_3_and_5_and_7() {
+        assertThat(new FizzBuzz(140).reply(), equalTo("BuzzWhizz"));
     }
 
     @Test
-    public void should_return_buzzwhizz_when_number_is_divisible_by_3_and_5_and_7() {
+    public void should_return_fizzbuzzwhizz_when_number_is_divisible_by_3_and_5_and_7() {
         assertThat(new FizzBuzz(105).reply(), equalTo("FizzBuzzWhizz"));
     }
 }
