@@ -20,18 +20,20 @@ public class TestFizzBuzz {
     }
 
     @Test
-    public void should_return_buzz_when_number_is_divisible_by_5() {
+    public void should_return_buzz_when_number_is_divisible_by_5_and_not_divisible_by_7() {
         assertThat(new FizzBuzz(5).reply(), equalTo("Buzz"));
+        assertThat(new FizzBuzz(10).reply(), equalTo("Buzz"));
     }
 
     @Test
-    public void should_return_whizz_when_number_is_divisible_by_7() {
+    public void should_return_whizz_when_number_is_divisible_by_7_and_not_contains_5() {
         assertThat(new FizzBuzz(7).reply(), equalTo("Whizz"));
+        assertThat(new FizzBuzz(14).reply(), equalTo("Whizz"));
     }
 
     @Test
-    public void should_return_fizzbuzz_when_number_is_divisible_by_3_and_5() {
-        assertThat(new FizzBuzz(15).reply(), equalTo("FizzBuzz"));
+    public void should_return_fizzbuzz_when_number_is_divisible_by_3_and_5_and_not_contains_5() {
+        assertThat(new FizzBuzz(60).reply(), equalTo("FizzBuzz"));
     }
 
     @Test
@@ -45,7 +47,14 @@ public class TestFizzBuzz {
     }
 
     @Test
-    public void should_return_fizzbuzzwhizz_when_number_is_divisible_by_3_and_5_and_7() {
-        assertThat(new FizzBuzz(105).reply(), equalTo("FizzBuzzWhizz"));
+    public void should_return_fizzbuzzwhizz_when_number_is_divisible_by_3_and_5_and_7_and_not_contains_5_and_3() {
+        assertThat(new FizzBuzz(210).reply(), equalTo("FizzBuzzWhizz"));
+        assertThat(new FizzBuzz(1470).reply(), equalTo("FizzBuzzWhizz"));
+    }
+
+    @Test
+    public void should_return_whizz_when_number_is_divisible_by_7_and_is_contains_5() {
+        assertThat(new FizzBuzz(56).reply(), equalTo("Whizz"));
+        assertThat(new FizzBuzz(105).reply(), equalTo("Whizz"));
     }
 }
