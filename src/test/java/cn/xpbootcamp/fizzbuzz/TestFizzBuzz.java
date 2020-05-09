@@ -70,4 +70,11 @@ public class TestFizzBuzz {
         assertThat(new FizzBuzz(72).reply(), equalTo("Fizz"));
         assertThat(new FizzBuzz(1470).reply(), equalTo("Fizz"));
     }
+
+    @Test
+    public void should_return_whizz_when_number_is_contains_7_and_is_divisible_by_7_and_not_contains_3_and_5() {
+        assertThat(new FizzBuzz(7).reply(), equalTo("Whizz"));
+        assertThat(new FizzBuzz(77).reply(), equalTo("Whizz"));
+        assertThat(new FizzBuzz(70).reply(), equalTo("Whizz"));
+    }
 }

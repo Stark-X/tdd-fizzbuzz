@@ -19,6 +19,10 @@ public class FizzBuzz {
             return "Fizz";
         }
 
+        if (isContains(7) && isDivisibleByNumbers(Arrays.asList(7))) {
+            return "Whizz";
+        }
+
         if (isDivisibleByNumbers(Arrays.asList(7)) && isContains(5)) {
             return "Whizz";
         }
