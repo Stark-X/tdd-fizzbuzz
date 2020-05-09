@@ -57,4 +57,10 @@ public class TestFizzBuzz {
         assertThat(new FizzBuzz(56).reply(), equalTo("Whizz"));
         assertThat(new FizzBuzz(105).reply(), equalTo("Whizz"));
     }
+
+    @Test
+    public void should_return_number_it_self_when_number_is_not_divisible_by_7_and_is_contains_5_and_not_contains_3() {
+        assertThat(new FizzBuzz(58).reply(), equalTo("58"));
+        assertThat(new FizzBuzz(54).reply(), equalTo("54"));
+    }
 }
