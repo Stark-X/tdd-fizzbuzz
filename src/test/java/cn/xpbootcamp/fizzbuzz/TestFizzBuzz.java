@@ -8,10 +8,14 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 public class TestFizzBuzz {
     @Test
-    public void should_return_fizz_when_number_is_contains_3_and_not_contains_7() {
+    public void should_return_fizz_when_number_is_contains_3() {
         assertThat(new FizzBuzz(3).reply(), equalTo("Fizz"));
         assertThat(new FizzBuzz(13).reply(), equalTo("Fizz"));
         assertThat(new FizzBuzz(23).reply(), equalTo("Fizz"));
+
+        assertThat(new FizzBuzz(37).reply(), equalTo("Fizz"));
+        assertThat(new FizzBuzz(73).reply(), equalTo("Fizz"));
+        assertThat(new FizzBuzz(173).reply(), equalTo("Fizz"));
     }
 
     @Test
@@ -76,12 +80,5 @@ public class TestFizzBuzz {
         assertThat(new FizzBuzz(7).reply(), equalTo("Whizz"));
         assertThat(new FizzBuzz(77).reply(), equalTo("Whizz"));
         assertThat(new FizzBuzz(70).reply(), equalTo("Whizz"));
-    }
-
-    @Test
-    public void should_return_fizz_when_number_is_contains_7_and_3_and_not_contains_5() {
-        assertThat(new FizzBuzz(37).reply(), equalTo("Fizz"));
-        assertThat(new FizzBuzz(73).reply(), equalTo("Fizz"));
-        assertThat(new FizzBuzz(173).reply(), equalTo("Fizz"));
     }
 }
