@@ -42,7 +42,7 @@ public class FizzBuzz {
         if (isDivisibleByNumbers(Arrays.asList(3)) && !isContains(5)) {
             return "Fizz";
         }
-        if (isDivisibleByNumbers(Arrays.asList(5))) {
+        if (isDivisibleByNumbers(Arrays.asList(5)) && !isContains(7)) {
             return "Buzz";
         }
         if (isDivisibleByNumbers(Arrays.asList(7))) {

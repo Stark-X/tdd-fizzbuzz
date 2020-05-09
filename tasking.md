@@ -116,6 +116,7 @@ THEN `Whizz` should be replied
 GIVEN `number` is contains `7`
 AND `number` is contains `5`
 AND `number` is not divisible by `7`
+AND `number` is not divisible by `3`
 WHEN reply the result,
 THEN `number` it self should be replied
 
