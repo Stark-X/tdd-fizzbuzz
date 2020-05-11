@@ -69,10 +69,21 @@ public class TestFizzBuzz {
     }
 
     @Test
-    public void should_return_fizz_when_number_is_contains_7_and_is_divisible_by_3_and_not_contains_3_and_5() {
+    public void should_return_fizz_when_number_is_contains_7_and_is_divisible_by_3_and_is_not_divisible_by_7_and_not_contains_3_and_5() {
         assertThat(new FizzBuzz(27).reply(), equalTo("Fizz"));
         assertThat(new FizzBuzz(72).reply(), equalTo("Fizz"));
-        assertThat(new FizzBuzz(1470).reply(), equalTo("Fizz"));
+    }
+
+    @Test
+    public void should_return_whizz_when_number_is_divisible_by_7_and_not_contains_3_and_5() {
+        assertThat(new FizzBuzz(7).reply(), equalTo("Whizz"));
+        assertThat(new FizzBuzz(14).reply(), equalTo("Whizz"));
+    }
+
+    @Test
+    public void should_return_fizzwhizz_when_number_is_divisible_by_3_and_7_and_contains_7_and_not_contains_3_and_5() {
+        assertThat(new FizzBuzz(147).reply(), equalTo("FizzWhizz"));
+        assertThat(new FizzBuzz(1470).reply(), equalTo("FizzWhizz"));
     }
 
     @Test

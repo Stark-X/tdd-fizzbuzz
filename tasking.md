@@ -121,3 +121,13 @@ WHEN reply the result,
 THEN `number` it self should be replied
 
 `sample: 157`
+
+## Scenario 17
+
+GIVEN `number` is contains `7`
+AND `number` is divisible by `7`
+AND `number` is divisible by `3`
+WHEN reply the result,
+THEN `FizzWhizz` should be replied
+
+`sample: 147`
